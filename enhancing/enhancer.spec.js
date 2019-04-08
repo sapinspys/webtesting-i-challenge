@@ -14,19 +14,6 @@ describe('enhancer.js', () => {
     enhancement: 20
   }
 
-  const item3 = {
-    name: "Spiked Club",
-    durability: 70,
-    enhancement: 16
-  }
-
-  
-  const item4 = {
-    name: "Rusty Halberd",
-    durability: 5,
-    enhancement: 10
-  }
-
   describe('repair', () => {
     it('should raise durability to 100', () => {
       expect(repair(item1)).toHaveProperty('durability', 100);
@@ -53,6 +40,18 @@ describe('enhancer.js', () => {
   })
 
   describe('fail', () => {
+    const item3 = {
+      name: "Spiked Club",
+      durability: 70,
+      enhancement: 16
+    }
+  
+    const item4 = {
+      name: "Rusty Halberd",
+      durability: 5,
+      enhancement: 10
+    }
+    
     it('should decrease enhancement by 5 if enhancement level is less than 15', () => {
       expect(fail(item4)).toHaveProperty('enhancement', 5)
     })
