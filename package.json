@@ -5,6 +5,9 @@
   "repository": "https://github.com/sapinspys/webtesting-i-challenge.git",
   "author": "Guillermo Arria-Devoe <garri009@fiu.edu>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --watch --verbose"
+  },
   "devDependencies": {
     "jest": "^24.7.1"
   }
