@@ -1,0 +1,11 @@
+{
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sapinspys/webtesting-i-challenge.git",
+  "author": "Guillermo Arria-Devoe <garri009@fiu.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
