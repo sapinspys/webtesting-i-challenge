@@ -14,7 +14,16 @@ function succeed(item) {
 }
 
 function fail(item) {
-  return { ...item };
+  const { name, enhancement } = item
+  if (enhancement <= 0) {
+    return `Your ${name} has broken...`
+  } else if (enhancement > 16 && enhancement <= 20) {
+    return {...item, enhancement: enhancement-1}
+  } else if (enhancement === 15 || enhancement === 16) {
+    return {...item, enhancement: enhancement-10}
+  } else {
+    return {...item, enhancement: enhancement-5}
+  }
 }
 
 function repair(item) {
