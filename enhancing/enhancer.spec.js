@@ -31,6 +31,10 @@ describe('enhancer.js', () => {
     it('should raise durability to 100', () => {
       expect(repair(item1)).toHaveProperty('durability', 100);
     })
+
+    it('should not modify enhancement', () => {
+      expect(repair(item1)).toHaveProperty('enhancement', 0)
+    })
   })
 
   describe('succeed', () => {
