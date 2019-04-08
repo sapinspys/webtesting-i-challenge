@@ -74,4 +74,14 @@ describe('enhancer.js', () => {
       expect(succeed(item2)).toHaveProperty('durability', 70)
     })
   })
+
+  describe('get', () => {
+    it('should modify item name if enhancement level is above 0', () => {
+      expect(get(item2)).toHaveProperty('name', `[+${item2.enhancement}] ${item2.name}`)
+    })
+
+    it('should NOT modify item name if enhancement level is 0', () => {
+      expect(get(item1)).toHaveProperty('name', item1.name)
+    })
+  })
 })
